@@ -8,7 +8,7 @@ def create_db(engine):
     df.rename(columns={'adj close': 'adjclose'},inplace=True) #prevents disagreements with space of SQL and ORM
     df = df.reindex(columns=['symbol', 'date', 'volume', 'open', 'close', 'high', 'low', 'adjclose'])
     df['symbol']="AAME"
- 
+  
     # Create a SQL table directly from a dataframe, first itteration with preferably 1 ticker
     df.volume = df.volume.astype(float) #IMPORTANT, later for SQL not to error us with wrong type (double vs bigint)
 
