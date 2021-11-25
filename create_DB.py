@@ -20,5 +20,5 @@ def create_db(engine):
                 ADD PRIMARY KEY (symbol, date);"""
 
     engine.execute(query)
-
+ 
 
