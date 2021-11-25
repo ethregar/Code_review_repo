@@ -2,7 +2,7 @@ import yfinance as yf
 
 #default ticker download and prepare to create DB table
 def create_db(engine):
-    df = yf.download("AAME")
+    df = yf.download("AAME") 
     df.reset_index(level=0, inplace=True)
     df.columns= df.columns.str.lower() #lowercase cause tables
     df.rename(columns={'adj close': 'adjclose'},inplace=True) #prevents disagreements with space of SQL and ORM
