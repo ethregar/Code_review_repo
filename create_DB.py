@@ -18,7 +18,6 @@ def create_db(engine):
     # Create a primary key on the table
     query = """ALTER TABLE daily_prices 
                 ADD PRIMARY KEY (symbol, date);"""
-
     engine.execute(query)
- 
+   
 
